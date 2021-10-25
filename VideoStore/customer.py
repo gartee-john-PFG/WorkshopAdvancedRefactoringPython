@@ -21,13 +21,13 @@ class Customer(object):
             # determine amounts for each line
 
             if each.getMovie().getPriceCode() == Movie.REGULAR:
-                total_amount += 2
+                this_amount += 2
                 if each.getDaysRented() > 2:
                     this_amount += (each.getDaysRented() - 2) * 1.5
             elif each.getMovie().getPriceCode() == Movie.NEW_RELEASE:
-                    total_amount += each.getDaysRented() * 3
+                    this_amount += each.getDaysRented() * 3
             elif each.getMovie().getPriceCode() ==  Movie.CHILDRENS:
-                    total_amount += 1.5
+                    this_amount += 1.5
                     if (each.getDaysRented() > 3):
                         this_amount += (each.getDaysRented() - 3) * 1.5
             
